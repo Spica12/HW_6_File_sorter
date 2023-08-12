@@ -77,4 +77,6 @@ def scan(folder):
 
                 if not is_reg:
                     unknown.add(extension)
+
+# Test GH
                 
