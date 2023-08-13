@@ -6,6 +6,7 @@ from normalize import *
 
 
 def main():
+    # path = Path('Modul_6_Work_with_files\Homework_6\TEMP')
     path = Path(sys.argv[1])
 
     sort(path)
@@ -74,5 +75,4 @@ def sort(path):
 
 
 if __name__ == '__main__':
-    # path = Path('Modul_6_Work_with_files\Homework_6\TEMP')
     main()
