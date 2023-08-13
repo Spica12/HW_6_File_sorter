@@ -25,6 +25,7 @@ def move_archives(archieve, root_folder, dist):
 
 
 def move_file(file, root_folder, dist):
+    
     target_folder = root_folder/dist
     target_folder.mkdir(exist_ok=True)
     name = file.name.removesuffix(file.suffix)
@@ -32,9 +33,10 @@ def move_file(file, root_folder, dist):
     file.replace(target_folder/f'{normalize(name)}{file.suffix}')
 
 def remove_empty_folder(folder):
-    if not any(folder.iterdir()):
-        folder.rmdir()
 
+    if not any(folder.iterdir()):
+
+        folder.rmdir()
         remove_empty_folder(folder.parent)
         print(f'Empty folder {folder} have been deleted!')
 
@@ -42,6 +44,7 @@ def remove_empty_folder(folder):
 def get_folder_objects(path):
 
     for folder in path.iterdir():
+
         if folder.is_dir():
             remove_empty_folder(folder)
 
