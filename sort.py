@@ -5,6 +5,12 @@ from scan import *
 from normalize import *
 
 
+def main():
+    path = Path(sys.argv[1])
+
+    sort(path)
+
+
 def move_archives(archieve, root_folder, dist):
     
     target_folder = root_folder/dist
@@ -69,6 +75,4 @@ def sort(path):
 
 if __name__ == '__main__':
     # path = Path('Modul_6_Work_with_files\Homework_6\TEMP')
-    path = Path(sys.argv[1])
-
-    sort(path)
+    main()
