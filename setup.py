@@ -9,7 +9,7 @@ setup(name='clean_folder',
       license=file.LICENCE
       description='clean folder from some folder',
       long_description = file.README.md
-      url='',
+      url='https://github.com/Spica12/HW_7_File_sorter',
       entry_points={'console_scripts': ['clean-folder = clean_folder.clean:main',
                                         'fill-files = clean_folder.file_generator:main_generator']},
       zip_safe=False
