@@ -1,3 +1,4 @@
+import sys
 from pathlib import Path
 from random import randint, choice, choices
 import shutil
@@ -62,9 +63,6 @@ def generate_file(path):
     with open(f'{path}/{generate_name()}.{choice(type_files).lower()}', 'wb') as file:
         file.write('Some text'.encode())
 
-        
-
-
 
 def generate_name():
 
@@ -92,12 +90,18 @@ def generator_folders_and_files(path):
     add_folder(path)
 
 
-if __name__ == '__main__':
+def main_generator():
 
-    parent_folder = Path('Modul_6_Work_with_files/Homework_6/TEMP')
+    parent_folder = Path(sys.argv[1])
     parent_folder.mkdir(parents=True, exist_ok=True)
     print(f'{parent_folder = }')
     generator_folders_and_files(parent_folder)
+
+
+if __name__ == '__main__':
+    main_generator()
+
+    
 
     
     
